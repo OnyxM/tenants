@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class FamilleController extends Controller
 {
-    public function familleDetails($fam_slug)
+    public function details($fam_slug)
     {
         $famille = Famille::whereSlug($fam_slug)->first();
 
@@ -21,10 +21,5 @@ class FamilleController extends Controller
         ];
 
         return view("famille.details", $data);
-    }
-
-    public function add()
-    {
-        die('Ajouter une famille');
     }
 }

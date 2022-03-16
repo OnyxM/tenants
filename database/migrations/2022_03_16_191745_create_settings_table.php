@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('facture_eaus', function (Blueprint $table) {
+        Schema::create('settings', function (Blueprint $table) {
             $table->id();
-            $table->string("date");
-            $table->string("indice");
-            $table->string("amount");
-            $table->integer("famille_id");
+            $table->string("name");
+            $table->string("value");
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('facture_eaus');
+        Schema::dropIfExists('settings');
     }
 };

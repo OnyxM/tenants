@@ -116,5 +116,7 @@
 	<!-- Custom JS -->
 	<script src="{{asset('dashboard/assets/js/admin.js')}}"></script>
 
+@yield("js")
+
 </body>
 </html>

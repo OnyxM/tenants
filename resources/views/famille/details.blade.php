@@ -27,22 +27,25 @@
                                 <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Category</th>
                                     <th>Date</th>
+                                    <th>Indice du Mois</th>
+                                    <th>Montant</th>
                                     <th class="text-right">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
+                                @php $i = 1; @endphp
                                 @foreach($famille->factureEaux as $watter_bill)
                                     <tr>
-                                        <td>1</td>
-                                        <td>
-                                            <img class="rounded service-img mr-1" src="assets/img/category/category-01.jpg" alt="Category Image">Computer</td>
-                                        <td>11 Sep 2020</td>
+                                        <td>{{$i}}</td>
+                                        <td>{{$watter_bill->date}}</td>
+                                        <td>{{$watter_bill->indice}}</td>
+                                        <td>{{$watter_bill->amount}}</td>
                                         <td class="text-right">
-                                            <a href="edit-category.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Edit</a>
+                                            <a href="{{route('famille.fac_eau.delete',['famille_slug' => $famille->slug,'id' => $watter_bill->id])}}" class="btn btn-sm bg-success-light mr-2">	<i class="fa fa-trash mr-1"></i></a>
                                         </td>
                                     </tr>
+                                    @php $i++; @endphp
                                 @endforeach
                                 </tbody>
                             </table>
