@@ -17,7 +17,8 @@ class SettingsTableSeeder extends Seeder
     {
         $settings = [
             ['name' => "water_meter_cube_price", 'value' => "364"],
-            ['name' => "water_tva", 'value' => "0,1925"],
+            ['name' => "tva", 'value' => "0,1925"],
+            ['name' => "elec_unit_prices", 'value' => "79,94"],
         ];
 
         foreach ($settings as $setting) {

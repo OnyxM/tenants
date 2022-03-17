@@ -11,6 +11,7 @@ class FactureElectricity extends Model
 
     protected $fillable=[
         'date',
+        'indice',
         'amount',
         'famille_id',
     ];

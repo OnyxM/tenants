@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('facture_electricities', function (Blueprint $table) {
             $table->id();
             $table->string("date");
+            $table->string("indice");
             $table->string("amount");
             $table->integer("famille_id");
             $table->timestamps();

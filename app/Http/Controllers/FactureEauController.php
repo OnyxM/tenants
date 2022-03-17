@@ -22,7 +22,7 @@ class FactureEauController extends Controller
             'famille' => $famille,
             'l_indice' => $famille->factureEaux()->orderBy('id', "DESC")->first()->indice ?? 0,
             'meter_cube_price' => Setting::where('name', 'water_meter_cube_price')->first()->value,
-            'tva_value' => Setting::where('name', 'water_tva')->first()->value,
+            'tva_value' => Setting::where('name', 'tva')->first()->value,
         ];
 
         return view("famille.eau.add", $data);
